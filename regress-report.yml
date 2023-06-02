@@ -2,7 +2,7 @@
 test-cases:
 - summary: |
     Проверка поиска товара по ключевому слову
-  status: pass
+  status: fail
 
 - summary: |
     Проверка поиска товара по категории
@@ -14,11 +14,11 @@ test-cases:
     
 - summary: |
     Проверка работы фильтра товаров по наличию
-  status: pass
+  status: fail
   
 - summary: |
     Проверка работы фильтра товаров по бренду
-  status: pass
+  status: fail
   
 - summary: |
     Просмотр товара и подробной информации о товаре
@@ -54,7 +54,59 @@ test-cases:
     
 bugreports:
   - summary: |
+    Не работает поиск товара по ключевому слову
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести диапазон цены: от 0 до 1000
+  expected-result: |
+    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+  actual-result: |
+    Список товаров не изменяется
+    
+  - summary: |
     Не работает фильтр товаров по цене
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести диапазон цены: от 0 до 1000
+  expected-result: |
+    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+  actual-result: |
+    Список товаров не изменяется
+    
+  - summary: |
+    Не работает фильтр товаров по наличию
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести диапазон цены: от 0 до 1000
+  expected-result: |
+    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+  actual-result: |
+    Список товаров не изменяется
+    
+  - summary: |
+    Не работает фильтр товаров по бренду
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести диапазон цены: от 0 до 1000
+  expected-result: |
+    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+  actual-result: |
+    Список товаров не изменяется
+    
+  - summary: |
+    Отсутствуют кнопки пролистывания страниц
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
     Windows 10 Pro
