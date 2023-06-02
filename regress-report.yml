@@ -53,7 +53,7 @@ test-cases:
   status: pass
     
 bugreports:
-  - summary: |
+- summary: |
     Не работает поиск товара по ключевому слову
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
@@ -67,7 +67,7 @@ bugreports:
   actual-result: |
     Список товаров не изменяется
     
-  - summary: |
+- summary: |
     Не работает фильтр товаров по цене
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
@@ -80,7 +80,7 @@ bugreports:
   actual-result: |
     Список товаров не изменяется  
 
-  - summary: |
+- summary: |
     Не работает фильтр товаров по бренду
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
@@ -93,7 +93,7 @@ bugreports:
   actual-result: |
     Список товаров не изменяется
     
-  - summary: |
+- summary: |
     Отсутствуют кнопки пролистывания страниц
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
@@ -105,7 +105,7 @@ bugreports:
   actual-result: |
     Отсутствуют кнопки пролистывания страниц
     
-  - summary: |
+- summary: |
     Некорректно работает версия сайта на смартфоне
   environment: |
     iPhone 14
