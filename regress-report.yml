@@ -60,9 +60,10 @@ bugreports:
     Windows 10 Pro
   steps-to-reproduce: |
     1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    2. Ввести диапазон цены: от 0 до 1000
+    2. Ввести в поле поиска 'phone'
+    3. Нажать Enter
   expected-result: |
-    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+    В списке товаров отображаются все товары, в названии или описании коорых указано искомое слово
   actual-result: |
     Список товаров не изменяется
     
@@ -77,21 +78,8 @@ bugreports:
   expected-result: |
     В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
   actual-result: |
-    Список товаров не изменяется
-    
-  - summary: |
-    Не работает фильтр товаров по наличию
-  environment: |
-    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
-    Windows 10 Pro
-  steps-to-reproduce: |
-    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    2. Ввести диапазон цены: от 0 до 1000
-  expected-result: |
-    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
-  actual-result: |
-    Список товаров не изменяется
-    
+    Список товаров не изменяется  
+
   - summary: |
     Не работает фильтр товаров по бренду
   environment: |
@@ -99,9 +87,9 @@ bugreports:
     Windows 10 Pro
   steps-to-reproduce: |
     1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    2. Ввести диапазон цены: от 0 до 1000
+    2. Нажать галочку для бренда Apple
   expected-result: |
-    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+    В списке товаров отображаются все товары указанного бренда
   actual-result: |
     Список товаров не изменяется
     
@@ -112,11 +100,10 @@ bugreports:
     Windows 10 Pro
   steps-to-reproduce: |
     1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    2. Ввести диапазон цены: от 0 до 1000
   expected-result: |
-    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+    Есть кнопки пролистывания страниц Next и Previous
   actual-result: |
-    Список товаров не изменяется
+    Отсутствуют кнопки пролистывания страниц
     
   - summary: |
     Некорректно работает версия сайта на смартфоне
@@ -124,11 +111,10 @@ bugreports:
     iPhone 14
     iOS 16.3.1
   steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/   
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app  
     2. Добавить товар в корзину
     3. Перейти в корзину
   expected-result: |
     Все элементы страницы отображаются корректно, размеры полей не искажены, поля не перекрывают друг друга
   actual-result: |
     Поля фильтров и категорий находятся внизу страницы, после товаров, что очень неудобно для использования
-    
