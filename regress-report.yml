@@ -12,7 +12,7 @@ test-cases:
     Проверка работы фильтра товаров по цене 1
   status: fail
   
-  - summary: |
+- summary: |
     Проверка работы фильтра товаров по цене 2
   status: fail
   
@@ -124,7 +124,7 @@ bugreports:
   steps-to-reproduce: |
     1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     2. Выбрать Price from = -8 Price to = empty
-      expected-result: |
+  expected-result: |
     Поле не дает ввести отрицательное значение или появляется предупреждение о некорректном значении
   actual-result: |
     Поле цены позволяет ввести отрицательное значение. Список товаров изменяется по непонятному признаку
