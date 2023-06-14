@@ -18,11 +18,11 @@ test-cases:
   
 - summary: |
     Проверка работы фильтра товаров по цене 3
-  status: fail
+  status: FAIL!
     
 - summary: |
     Проверка работы фильтра товаров по наличию
-  status: fail
+  status: FAIL!
   
 - summary: |
     Проверка работы фильтра товаров по бренду
@@ -34,6 +34,14 @@ test-cases:
 
 - summary: |
     Добавление товара в корзину
+  status: pass
+
+- summary: |
+    Добавление разных товаров в корзину
+  status: pass
+
+- summary: |
+    Добавление нескольких одинаковых товаров разного количества в корзину
   status: pass
   
 - summary: |
@@ -59,7 +67,27 @@ test-cases:
 - summary: |
     Удаление товара из корзины
   status: pass
-    
+  
+- summary: |
+    Очистка корзины
+  status: pass
+
+- summary: |
+    Заказ товара
+  status: fail
+
+- summary: |
+    Навигация по страницам каталога
+  status: pass
+
+- summary: |
+    Переход в категорию товаров по хештегу
+  status: pass
+
+- summary: |
+    Проверка работы версии сайта на русском языке
+  status: fail
+  
 bugreports:
 - summary: |
     Не работает поиск товара по ключевому слову
@@ -77,6 +105,32 @@ bugreports:
     
 - summary: |
     Не работает фильтр товаров по цене
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести диапазон цены: от 0 до 1000
+  expected-result: |
+    В списке товаров отображаются все товары, чья цена попадает в указанный диапазон
+  actual-result: |
+    Список товаров не изменяется  
+    
+- summary: |
+    Поле цены Price from позволяет ввести отрицательное значение
+  environment: |
+    Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
+    Windows 10 Pro
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Выбрать Price from = -8 Price to = empty
+      expected-result: |
+    Поле не дает ввести отрицательное значение или появляется предупреждение о некорректном значении
+  actual-result: |
+    Поле цены позволяет ввести отрицательное значение. Предупреждение о некорректном значении отсутствует. Поиск выводит все товары
+    
+- summary: |
+    Не работает фильтр товаров по наличию
   environment: |
     Google Chrome   Версия 113.0.5672.127 (Официальная сборка), (64 бит)
     Windows 10 Pro
